@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+/*Color Palette*/
+:root {
+  --link-bg-color: rgba(211, 211, 211, 0.2);
+  --link-color: black;
+  --article-bg-color: rgb(rgb(198, 9, 255));
+  --list-item-bg-color: antiquewhite;
+  --accent-color: black;
+  --accent-text-color: white;
+}
+
+/*Page*/
+body {
+  line-height: 1.4;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  border-bottom: 0.25em solid #4da2a7;
+}
+body>a {
+  position: absolute;
+  padding: 0.5em 1em;
+  background-color: #8cc8d2;
+}
+/*Header*/
+header {
+  display: grid;
+  background-image: url(img/pawel-czerwinski-vI5XwPbGvmY-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20vh;
+}
+header>div.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8cc8d2;
+  width: 30vw;
+  margin: 2em auto;
+  padding: 2em;
+  border-bottom: 0.5em solid #4da2a7;
+  border-left: 0.5em solid #4da2a7;
+}
+/*Star icon*/
+svg {
+  width: 1em;
+  height: auto;
+  display: block;
+  justify-self: center;
+}
+
+/*Navigation Bar*/
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  background: RGB(229 241 243);
+}
+
+nav ul li {
+  margin: 0.25rem;
+}
+
+nav ul li a {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+/*Content*/
+div.container article {
+  margin: 1rem 5rem;
+  padding: 1rem;
+  background-color: var(--article-bg-color);
+  display: flex;
+  flex-direction: row;
+
+}
+
+article section,
+body aside,
+footer.page-footer {
+  padding: 1rem 2rem;
+}
+
+/*About*/
+article#about section {
+  flex: 1;
+}
+
+article#about section:last-child ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+article#about section:last-child ul li {
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--list-item-bg-color);
+}
+
+/*Guidelines*/
+/*Contribute*/
+article#contribute {
+  display: flex;
+  flex-direction: column;
+}
+
+#contribute>section:nth-child(2)>ol {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1.5em;
+  list-style-type: none;
+  counter-reset: myCounter;
+}
+
+#contribute>section:nth-child(2)>ol li::marker {
+  content: counter(myCounter);
+  font-size: 2em;
+}
+
+#contribute>section:nth-child(2)>ol li {
+  grid-row: 1;
+  counter-increment: myCounter;
+  padding-left: 1em;
+}
+
+aside>div>ul {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  list-style-type: none;
+}
+
+aside>div>ul>li {
+  padding: 0 1rem;
+  border-left: 2px solid var(--accent-color);
+}
+
+footer.page-footer {
+  text-align: center;
+  font-size: 0.5rem;
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
+}
+
+footer>div>ul {
+  list-style-type: none;
+}
+
+footer.page-footer a {
+  text-decoration: none;
+  color: var(--accent-text-color)
+}
+
+footer.page-footer a:hover {
+  border-bottom: 2px dashed yellow;
+}
