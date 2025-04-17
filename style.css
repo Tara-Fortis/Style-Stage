@@ -1,51 +1,72 @@
 @charset "UTF-8";
+/* ==========================================================================
+   Root Variables (Color Palette)
+   ========================================================================== */
 
-/*Color Palette*/
 :root {
   --link-bg-color: rgba(211, 211, 211, 0.2);
   --link-color: black;
-  --article-bg-color: rgb(rgb(198, 9, 255));
+  --article-bg-color: rgba(198, 9, 255, 0);
   --list-item-bg-color: antiquewhite;
   --accent-color: black;
   --accent-text-color: white;
 }
 
-/*Page*/
+/* ==========================================================================
+   Global Styles
+   ========================================================================== */
+
+/*Body */
 body {
   line-height: 1.4;
 }
-a {
-  text-decoration: none;
-  color: black;
-}
-a:hover {
-  border-bottom: 0.25em solid #4da2a7;
-}
+
 body>a {
   position: absolute;
   padding: 0.5em 1em;
   background-color: #8cc8d2;
+  text-decoration: none;
+  color: black;
+  box-shadow: 1px 5px 9px -2px #00635e8f;
 }
-/*Header*/
+
+/*Links */
+a {
+  text-decoration: none;
+  color: #00772a;
+}
+
+a:hover {
+  border-bottom: #4da2a7;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
 header {
   display: grid;
   background-image: url(img/pawel-czerwinski-vI5XwPbGvmY-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 20vh;
+  min-height: 25vh;
 }
+
+/*Header Container */
 header>div.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #8cc8d2;
   width: 30vw;
-  margin: 2em auto;
+  margin: 2.5em auto;
   padding: 2em;
   border-bottom: 0.5em solid #4da2a7;
   border-left: 0.5em solid #4da2a7;
+  box-shadow: -4px 5px 9px -2px #00635e8f;
 }
-/*Star icon*/
+
+/*Star Icon (SVG) */
 svg {
   width: 1em;
   height: auto;
@@ -53,12 +74,26 @@ svg {
   justify-self: center;
 }
 
-/*Navigation Bar*/
+/* GitHub Link */
+header a.link-github {
+  background-color: #b1d7dd;
+  border-radius: 50%;
+  padding: 2.5em 1em;
+  box-shadow: 0 2px 5px 2px #71a6ac inset;
+}
+
+/* ==========================================================================
+    Navigation Bar
+   ========================================================================== */
+
 nav ul {
   display: flex;
   list-style-type: none;
   justify-content: center;
   background: RGB(229 241 243);
+  padding: 0;
+  margin: 0;
+  box-shadow: 1px 3px 6px 1px #b4bdc2;
 }
 
 nav ul li {
@@ -71,14 +106,14 @@ nav ul li a {
   color: var(--link-color);
 }
 
-/*Content*/
+/* ==========================================================================
+    Content
+   ========================================================================== */
+
 div.container article {
-  margin: 1rem 5rem;
-  padding: 1rem;
   background-color: var(--article-bg-color);
   display: flex;
   flex-direction: row;
-
 }
 
 article section,
@@ -87,7 +122,7 @@ footer.page-footer {
   padding: 1rem 2rem;
 }
 
-/*About*/
+/*About Section */
 article#about section {
   flex: 1;
 }
@@ -104,11 +139,15 @@ article#about section:last-child ul li {
   padding: 0.25rem 0.5rem;
   margin: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  background-color: var(--list-item-bg-color);
+  background-color: #edcab68c;
 }
 
-/*Guidelines*/
-/*Contribute*/
+/*Guidelines Section */
+#guidelines {
+  background-color: #01595518;
+}
+
+/*Contribute Section */
 article#contribute {
   display: flex;
   flex-direction: column;
@@ -137,6 +176,10 @@ article#contribute {
   padding-left: 1em;
 }
 
+/* ==========================================================================
+   Aside
+   ========================================================================== */
+
 aside>div>ul {
   display: flex;
   justify-content: flex-start;
@@ -148,6 +191,10 @@ aside>div>ul>li {
   padding: 0 1rem;
   border-left: 2px solid var(--accent-color);
 }
+
+/* ==========================================================================
+  Footer
+   ========================================================================== */
 
 footer.page-footer {
   text-align: center;
@@ -162,7 +209,7 @@ footer>div>ul {
 
 footer.page-footer a {
   text-decoration: none;
-  color: var(--accent-text-color)
+  color: var(--accent-text-color);
 }
 
 footer.page-footer a:hover {
