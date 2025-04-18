@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/*Google Material Icons*/
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 /* ==========================================================================
    Root Variables (Color Palette)
    ========================================================================== */
@@ -176,13 +178,38 @@ article#contribute {
   padding-left: 1em;
 }
 
+#files .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+#files h3 {
+  grid-row: 1;
+  grid-column: span 3;
+  align-self: center;
+  justify-self: center;
+}
+#files a {
+  grid-row: 2;
+  justify-self: center;
+  align-self: center;
+}
+#files > div > a.link-downloadcss::before {
+  content: url(img/download-icon.svg);
+}
+#files > div > a.link-downloadhtml::before {
+  content: url(img/download-icon.svg);
+}
+#files > div > a.link-codepen::before {
+  content: url(img/alt-route.svg);
+}
 /* ==========================================================================
    Aside
    ========================================================================== */
 
 aside>div>ul {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 0;
   list-style-type: none;
 }
