@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*Google Material Icons*/
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* ==========================================================================
    Root Variables (Color Palette)
    ========================================================================== */
@@ -41,7 +41,66 @@ a {
 a:hover {
   border-bottom: #4da2a7;
 }
-
+/*Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+}
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-size: 2em;
+  padding-bottom: 0.5em;
+}
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-size: 1.2em;
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 1em;
+  margin: 0.5em 0;
+  text-align: center;
+  border-bottom: 2px solid #4da2a7;
+  box-shadow: 0px 2px 1px 1px #c9c8c86e;
+}
+p {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 0.5em ;
+}
+a {
+  margin: 0.5em 0;
+}
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -135,6 +194,7 @@ article#about section:last-child ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  justify-content: space-evenly;
 }
 
 article#about section:last-child ul li {
@@ -148,13 +208,17 @@ article#about section:last-child ul li {
 #guidelines {
   background-color: #01595518;
 }
-
+#guidelines > section {
+  padding: 1em 6em;
+}
 /*Contribute Section */
 article#contribute {
   display: flex;
   flex-direction: column;
 }
-
+#contribute > section:nth-child(2) {
+  background-color: #e9efef;
+}
 #contribute>section:nth-child(2)>ol {
   display: grid;
   padding: 0;
@@ -207,6 +271,7 @@ article#contribute {
    Aside
    ========================================================================== */
 
+
 aside>div>ul {
   display: flex;
   justify-content: space-between;
@@ -217,6 +282,12 @@ aside>div>ul {
 aside>div>ul>li {
   padding: 0 1rem;
   border-left: 2px solid var(--accent-color);
+}
+body > aside.profile > div > ul, .features {
+  margin-bottom: 1em;
+}
+body > aside.profile > div > a::before {
+  content: url(img/eye.svg);
 }
 
 /* ==========================================================================
@@ -234,6 +305,9 @@ footer>div>ul {
   list-style-type: none;
 }
 
+#styles > div > a::before {
+  content: url(img/eye.svg);
+}
 footer.page-footer a {
   text-decoration: none;
   color: var(--accent-text-color);
