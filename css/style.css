@@ -1,9 +1,7 @@
 @charset "UTF-8";
 /*Google Material Icons*/
 @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-/* ==========================================================================
-   Root Variables (Color Palette)
-   ========================================================================== */
+/*=========== Root Variables (Color Palette) ===========*/
 
 :root {
   --link-bg-color: rgba(211, 211, 211, 0.2);
@@ -14,9 +12,7 @@
   --accent-text-color: white;
 }
 
-/* ==========================================================================
-   Global Styles
-   ========================================================================== */
+/*=========== Global Styles =========== */
 
 /*Body */
 body {
@@ -101,13 +97,11 @@ p {
 a {
   margin: 0.5em 0;
 }
-/* ==========================================================================
-   Header
-   ========================================================================== */
+/*=========== Header ===========*/
 
 header {
   display: grid;
-  background-image: url(img/pawel-czerwinski-vI5XwPbGvmY-unsplash.jpg);
+  background-image: url("img/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 25vh;
@@ -143,9 +137,7 @@ header a.link-github {
   box-shadow: 0 2px 5px 2px #71a6ac inset;
 }
 
-/* ==========================================================================
-    Navigation Bar
-   ========================================================================== */
+/*=========== Navigation Bar ===========*/
 
 nav ul {
   display: flex;
@@ -167,9 +159,7 @@ nav ul li a {
   color: var(--link-color);
 }
 
-/* ==========================================================================
-    Content
-   ========================================================================== */
+/*=========== Content ===========*/
 
 div.container article {
   background-color: var(--article-bg-color);
@@ -267,16 +257,14 @@ article#contribute {
 #files > div > a.link-codepen::before {
   content: url(img/alt-route.svg);
 }
-/* ==========================================================================
-   Aside
-   ========================================================================== */
+/*=========== Aside ===========*/
 
 
 aside>div>ul {
   display: flex;
   justify-content: space-between;
-  padding: 0;
   list-style-type: none;
+  padding-top: 1em; 
 }
 
 aside>div>ul>li {
@@ -290,9 +278,7 @@ body > aside.profile > div > a::before {
   content: url(img/eye.svg);
 }
 
-/* ==========================================================================
-  Footer
-   ========================================================================== */
+/*=========== Footer ===========*/
 
 footer.page-footer {
   text-align: center;
@@ -315,4 +301,56 @@ footer.page-footer a {
 
 footer.page-footer a:hover {
   border-bottom: 2px dashed yellow;
+}
+
+/*=========== Media Query for Phones up to 425px wide  ===========*/
+@media (max-width: 425px) {
+  body>a {
+    display: block;
+    position: static;
+    padding: 0.5em 1em;
+    box-shadow: none;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  header>div.container {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: #8cc8d200;
+  }
+  header a.link-github {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    border-radius: 0.5em;
+    padding: 1em;
+  }
+  header a.link-github svg {
+    align-self: left;
+  }
+  div.container article {
+    flex-direction: column;
+  }
+  #guidelines > section {
+    padding: 0.5em;
+  }
+  #contribute>section:nth-child(2)>ol {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1.5em;
+    list-style-type: none;
+  }
+  #contribute>section:nth-child(2)>ol li {
+    grid-row: auto;
+  }
+  
 }
