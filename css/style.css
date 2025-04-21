@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*Google Material Icons*/
+/*Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*=========== Global Styles =========== */
@@ -41,7 +41,6 @@ h1 {
 
 h2 {
   font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings:
@@ -52,7 +51,6 @@ h2 {
 
 h3 {
   font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings:
@@ -64,7 +62,6 @@ h3 {
 
 h4 {
   font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
   font-variation-settings: "wdth" 100;
@@ -77,7 +74,6 @@ h4 {
 
 p {
   font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   margin-bottom: 0.5em;
@@ -149,7 +145,6 @@ nav ul li a {
   text-decoration: none;
   color: black;
   font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings:
@@ -256,8 +251,6 @@ article#contribute {
 }
 
 /*=========== Aside ===========*/
-
-
 aside>div>ul {
   display: flex;
   justify-content: space-between;
@@ -300,10 +293,7 @@ footer.page-footer a:hover {
 /*=========== Media Query for Phones up to 425px wide  ===========*/
 @media (max-width: 425px) {
   body>a {
-    display: block;
-    position: static;
-    padding: 0.5em 1em;
-    box-shadow: none;
+    display: none;
   }
   header>div.container {
     border: none;
@@ -319,10 +309,6 @@ footer.page-footer a:hover {
     box-shadow: none;
     border-radius: 0.5em;
     padding: 1em;
-  }
-
-  header a.link-github svg {
-    align-self: left;
   }
 
   nav ul {
@@ -358,6 +344,13 @@ footer.page-footer a:hover {
 
   h2 {
     font-size: 1.5em;
-    padding: auto;
   }
 }
+
+/*
+References
+  https://developer.mozilla.org/en-US/docs/Web/CSS/@media
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  https://css-tricks.com/snippets/css/complete-guide-grid/
+  https://fonts.google.com/
+*/
